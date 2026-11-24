@@ -1,0 +1,1941 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SertifikaNet BNSP - Portal Uji & Sertifikasi Kompetensi Digital Nasional</title>
+  <title>CertiSkill BNSP - Portal Uji &amp; Sertifikasi Kompetensi Digital Nasional</title>
+
+  <!-- Google Fonts: Poppins (Heading & Brand), Plus Jakarta Sans (Body), Roboto Mono (Hash/Nomor Registrasi BNSP) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@500;600;700;800&family=Roboto+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Google Material Symbols Outlined (Pure Google Icons) -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="theme-light">
+  <!-- Accessibility Skip Link -->
+  <a href="#main-app" class="skip-link">Lewati ke konten aplikasi</a>
+
+  <!-- Top Institutional Bar -->
+  <aside class="institutional-bar" aria-label="Informasi Afiliasi Resmi">
+    <div class="container institutional-inner">
+      <div class="inst-left">
+        <span class="material-symbols-outlined inst-icon" aria-hidden="true">verified</span>
+        <span>Lembaga Sertifikasi Profesi (LSP) Terlisensi Badan Nasional Sertifikasi Profesi (BNSP)</span>
+      </div>
+      <div class="inst-right font-mono">
+        <span>Lisensi No: KEP.0418/BNSP/III/2024</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      <a href="#tab-beranda" class="brand-logo" data-target-tab="beranda" aria-label="SertifikaNet BNSP Beranda">
+        <div class="brand-badge-icon">
+          <span class="material-symbols-outlined" aria-hidden="true">workspace_premium</span>
+          <a href="#tab-beranda" class="brand-logo" data-target-tab="beranda" aria-label="CertiSkill BNSP Beranda">
+            <div class="brand-badge-icon" aria-hidden="true">
+              <span class="brand-logo-monogram">CS</span>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">Sertifika<span class="brand-accent">Net</span></span>
+              <span class="brand-name">Certi<span class="brand-accent">Skill</span></span>
+              <span class="brand-sub">PORTAL UJI KOMPETENSI BNSP</span>
+            </div>
+          </a>
+
+          <!-- Primary Application Navigation (Tabs) -->
+          <nav class="main-tab-nav" aria-label="Navigasi Utama Aplikasi">
+            <ul class="nav-tab-list" role="tablist">
+              <li role="presentation">
+                <button type="button" role="tab" id="nav-btn-beranda" class="nav-tab-btn nav-pill-btn active"
+                  aria-selected="true" aria-controls="view-beranda" data-tab="beranda"
+                  aria-label="Tab Beranda: Portal Uji Kompetensi BNSP">
+                  <div class="user-avatar-initial nav-avatar-icon" aria-hidden="true">
+                    <span class="material-symbols-outlined">home</span>
+                  </div>
+                  <div class="user-pill-info">
+                    <span class="user-pill-name">Beranda</span>
+                    <span class="user-pill-role font-mono">Portal BNSP</span>
+                  </div>
+                </button>
+              </li>
+              <li role="presentation">
+                <button type="button" role="tab" id="nav-btn-katalog" class="nav-tab-btn nav-pill-btn"
+                  aria-selected="false" aria-controls="view-katalog" data-tab="katalog"
+                  aria-label="Tab Katalog Skema Sertifikasi BNSP">
+                  <div class="user-avatar-initial nav-avatar-icon" aria-hidden="true">
+                    <span class="material-symbols-outlined">menu_book</span>
+                  </div>
+                  <div class="user-pill-info">
+                    <span class="user-pill-name">Katalog</span>
+                    <span class="user-pill-role font-mono">Skema SKKNI</span>
+                  </div>
+                </button>
+              </li>
+              <li role="presentation">
+                <button type="button" role="tab" id="nav-btn-jadwal" class="nav-tab-btn nav-pill-btn"
+                  aria-selected="false" aria-controls="view-jadwal" data-tab="jadwal"
+                  aria-label="Tab Jadwal Asesmen dan Unduhan Materi APL">
+                  <div class="user-avatar-initial nav-avatar-icon" aria-hidden="true">
+                    <span class="material-symbols-outlined">calendar_month</span>
+                  </div>
+                  <div class="user-pill-info">
+                    <span class="user-pill-name">Jadwal & Materi</span>
+                    <span class="user-pill-role font-mono">TUK Resmi</span>
+                  </div>
+                </button>
+              </li>
+              <li role="presentation">
+                <button type="button" role="tab" id="nav-btn-ujian" class="nav-tab-btn nav-pill-btn"
+                  aria-selected="false" aria-controls="view-ujian" data-tab="ujian"
+                  aria-label="Tab Ruang Ujian Online CBT Berproktor Ketat">
+                  <div class="user-avatar-initial nav-avatar-icon nav-icon-warning" aria-hidden="true">
+                    <span class="material-symbols-outlined text-warning">quiz</span>
+                  </div>
+                  <div class="user-pill-info">
+                    <span class="user-pill-name">Ujian Online</span>
+                    <span class="user-pill-role font-mono text-warning">CBT Proktor</span>
+                  </div>
+                </button>
+              </li>
+              <li role="presentation">
+                <button type="button" role="tab" id="nav-btn-sertifikasi" class="nav-tab-btn nav-pill-btn"
+                  aria-selected="false" aria-controls="view-sertifikasi" data-tab="sertifikasi"
+                  aria-label="Tab Daftar Sertifikat Kompetensi BNSP">
+                  <div class="user-avatar-initial nav-avatar-icon" aria-hidden="true">
+                    <span class="material-symbols-outlined">military_tech</span>
+                  </div>
+                  <div class="user-pill-info">
+                    <span class="user-pill-name">Sertifikasi</span>
+                    <span class="user-pill-role font-mono"><span id="earned-cert-count">2</span> Sertifikat</span>
+                  </div>
+                </button>
+              </li>
+              <li role="presentation">
+                <button type="button" role="tab" id="nav-btn-profil" class="nav-tab-btn nav-pill-btn"
+                  aria-selected="false" aria-controls="view-profil" data-tab="profil"
+                  aria-label="Tab Pengaturan Profil Asesi">
+                  <div class="user-avatar-initial nav-avatar-icon" aria-hidden="true">
+                    <span class="material-symbols-outlined">manage_accounts</span>
+                  </div>
+                  <div class="user-pill-info">
+                    <span class="user-pill-name">Profile</span>
+                    <span class="user-pill-role font-mono">Pengaturan</span>
+                  </div>
+                </button>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Header Utilities -->
+          <div class="header-actions">
+            <!-- Theme Toggle -->
+            <button type="button" id="theme-toggle" class="btn-icon theme-toggle-btn" aria-label="Beralih ke mode gelap"
+              title="Ubah tampilan tema">
+              <span class="material-symbols-outlined" aria-hidden="true">dark_mode</span>
+            </button>
+
+            <!-- Asesi Quick Account Mini Profile -->
+            <div class="user-pill-btn" id="header-user-btn" role="button" tabindex="0"
+              aria-label="Buka profil asesi: Raden Bagus Prakoso">
+              <div class="user-avatar-initial" aria-hidden="true">RB</div>
+              <div class="user-pill-info">
+                <span class="user-pill-name">Raden Bagus P.</span>
+                <span class="user-pill-role font-mono">Asesi Terverifikasi</span>
+              </div>
+            </div>
+
+            <!-- Mobile Drawer Toggle -->
+            <button type="button" id="mobile-menu-btn" class="mobile-menu-btn btn-icon" aria-expanded="false"
+              aria-controls="mobile-nav-drawer" aria-label="Buka menu navigasi mobile">
+              <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-nav-drawer" class="mobile-drawer" aria-hidden="true">
+          <div class="mobile-user-card">
+            <div class="user-avatar-initial lg">RB</div>
+            <div>
+              <strong class="mobile-user-name">Raden Bagus Prakoso, S.Kom</strong>
+              <span class="mobile-user-id font-mono">ID Asesi: BNSP-ID-2026-0912</span>
+            </div>
+          </div>
+          <nav aria-label="Navigasi Menu Mobile">
+            <ul class="mobile-nav-list">
+              <li>
+                <button type="button" class="mobile-nav-btn active" data-tab="beranda">
+                  <span class="material-symbols-outlined" aria-hidden="true">home</span>
+                  Beranda Portal
+                </button>
+              </li>
+              <li>
+                <button type="button" class="mobile-nav-btn" data-tab="katalog">
+                  <span class="material-symbols-outlined" aria-hidden="true">menu_book</span>
+                  Katalog Skema Sertifikasi
+                </button>
+              </li>
+              <li>
+                <button type="button" class="mobile-nav-btn" data-tab="jadwal">
+                  <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
+                  Jadwal Asesmen & Materi
+                </button>
+              </li>
+              <li>
+                <button type="button" class="mobile-nav-btn" data-tab="ujian">
+                  <span class="material-symbols-outlined" aria-hidden="true">quiz</span>
+                  Ruang Ujian Online (CBT Proktor)
+                </button>
+              </li>
+              <li>
+                <button type="button" class="mobile-nav-btn" data-tab="sertifikasi">
+                  <span class="material-symbols-outlined" aria-hidden="true">military_tech</span>
+                  Sertifikat Saya (2)
+                </button>
+              </li>
+              <li>
+                <button type="button" class="mobile-nav-btn" data-tab="profil">
+                  <span class="material-symbols-outlined" aria-hidden="true">manage_accounts</span>
+                  Pengaturan Profil Asesi
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+  </header>
+
+  <!-- Main Multi-Tab Application Container -->
+  <main id="main-app" class="main-content-wrap">
+
+    <!-- ===================================================================
+         TAB 1: BERANDA
+         =================================================================== -->
+    <section id="view-beranda" class="tab-pane active" role="tabpanel" aria-labelledby="nav-btn-beranda">
+
+      <!-- Asesi Dashboard Greeting -->
+      <div class="dashboard-hero-section">
+        <div class="container">
+          <div class="dashboard-hero-card">
+            <div class="hero-left">
+              <div class="section-tag">
+                <span class="material-symbols-outlined tag-icon" aria-hidden="true">shield</span>
+                Sertifikasi Kompetensi Kerja Nasional Indonesia
+              </div>
+              <h1 class="hero-title">Selamat Datang di Portal Asesmen SertifikaNet</h1>
+              <h1 class="hero-title">Selamat Datang di Portal Asesmen CertiSkill</h1>
+              <p class="hero-subtitle">
+                Akses resmi peserta uji sertifikasi kompetensi berstandar BNSP. Ikuti ujian online CBT berproktor ketat,
+                pantau jadwal asesmen di Tempat Uji Kompetensi (TUK), unduh materi pra-asesmen APL-01/02, dan kelola
+                dokumen sertifikat resmi Anda.
+              </p>
+              <div class="hero-actions">
+                <button type="button" class="btn btn-primary" id="btn-hero-start-exam" data-tab="ujian">
+                  <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">quiz</span>
+                  Masuk Ruang Ujian Online CBT
+                </button>
+                <button type="button" class="btn btn-outline" id="btn-jump-katalog" data-tab="katalog">
+                  <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">menu_book</span>
+                  Katalog Skema SKKNI
+                </button>
+              </div>
+            </div>
+
+            <!-- Stats Overview Cards -->
+            <div class="hero-stats-panel">
+              <div class="stat-mini-card">
+                <div class="stat-icon-wrap bg-blue">
+                  <span class="material-symbols-outlined" aria-hidden="true">workspace_premium</span>
+                </div>
+                <div>
+                  <span class="stat-val font-mono">2</span>
+                  <span class="stat-lbl">Sertifikat BNSP Aktif</span>
+                </div>
+              </div>
+
+              <div class="stat-mini-card">
+                <div class="stat-icon-wrap bg-emerald">
+                  <span class="material-symbols-outlined" aria-hidden="true">event_available</span>
+                </div>
+                <div>
+                  <span class="stat-val font-mono">1</span>
+                  <span class="stat-lbl">Asesmen Terjadwal</span>
+                </div>
+              </div>
+
+              <div class="stat-mini-card">
+                <div class="stat-icon-wrap bg-indigo">
+                  <span class="material-symbols-outlined" aria-hidden="true">videocam</span>
+                </div>
+                <div>
+                  <span class="stat-val font-mono">CBT</span>
+                  <span class="stat-lbl">Ujian Online Berproktor</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Interactive Verification & Active Schedule Reminder -->
+      <div class="container section-spacer">
+        <div class="two-col-dashboard-grid">
+
+          <!-- Upcoming Assessment Alert Box -->
+          <div class="card panel-card">
+            <div class="card-header">
+              <div class="card-header-left">
+                <span class="material-symbols-outlined text-primary" aria-hidden="true">event_note</span>
+                <h2 class="card-heading">Jadwal Uji Kompetensi Terdekat Anda</h2>
+              </div>
+              <span class="status-badge badge-warning">Tahap Pra-Asesmen</span>
+            </div>
+
+            <div class="assessment-reminder-box">
+              <div class="reminder-top">
+                <h3 class="reminder-scheme-title">Arsitek Solusi Perangkat Lunak Skala Besar</h3>
+                <span class="font-mono text-muted text-xs">Skema: SWE-ARCH-01 (SKKNI Level 7)</span>
+              </div>
+
+              <div class="reminder-meta-list">
+                <div class="reminder-meta-item">
+                  <span class="material-symbols-outlined" aria-hidden="true">calendar_today</span>
+                  <div>
+                    <strong>28 Maret 2026</strong>
+                    <span>Pukul 08.30 - 15.00 WIB</span>
+                  </div>
+                </div>
+                <div class="reminder-meta-item">
+                  <span class="material-symbols-outlined" aria-hidden="true">location_city</span>
+                  <div>
+                    <strong>TUK Mandiri Kampus Cyber Jakarta</strong>
+                    <span>Laboratorium Uji 3, Lantai 2</span>
+                  </div>
+                </div>
+                <div class="reminder-meta-item">
+                  <span class="material-symbols-outlined" aria-hidden="true">badge</span>
+                  <div>
+                    <strong>Asesor Penguji Ditugaskan</strong>
+                    <span>Ir. Hendra Gunawan, M.T. (No Reg: MET.000.002811)</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="reminder-footer">
+                <button type="button" class="btn btn-primary btn-sm" id="btn-go-to-exam-reminder" data-tab="ujian">
+                  <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">computer</span>
+                  Simulasi Ujian Teori CBT
+                </button>
+                <button type="button" class="btn btn-outline btn-sm" id="btn-view-materi-beranda" data-tab="jadwal">
+                  <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">download</span>
+                  Unduh Berkas APL
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct Verification Tool on Beranda -->
+          <div class="card panel-card">
+            <div class="card-header">
+              <div class="card-header-left">
+                <span class="material-symbols-outlined text-primary" aria-hidden="true">qr_code_scanner</span>
+                <h2 class="card-heading">Pengecekan Keaslian Sertifikat BNSP</h2>
+              </div>
+              <span class="status-badge badge-success">Online 24/7</span>
+            </div>
+
+            <p class="text-sm text-muted mb-3">
+              Verifikasi sertifikat kompetensi berlogo Garuda BNSP menggunakan nomor registrasi resmi atau hash tanda
+              tangan kriptografi.
+            </p>
+
+            <form id="beranda-verify-form" class="verify-form" novalidate>
+              <div class="input-with-action">
+                <span class="material-symbols-outlined input-leading-icon" aria-hidden="true">badge</span>
+                <input type="text" id="beranda-cert-input" class="form-input font-mono"
+                  placeholder="Contoh: CERT-2026-8891" required>
+                <button type="submit" class="btn btn-primary verify-submit-btn">
+                  <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">search</span>
+                  Periksa
+                </button>
+              </div>
+
+              <div class="quick-samples">
+                <span class="quick-samples-label">Coba sampel dokumen:</span>
+                <div class="sample-chips">
+                  <button type="button" class="sample-chip" data-sample="CERT-2026-8891">CERT-2026-8891 (Siber)</button>
+                  <button type="button" class="sample-chip" data-sample="CERT-2025-5519">CERT-2025-5519 (AI)</button>
+                  <button type="button" class="sample-chip" data-sample="CERT-2024-4402">CERT-2024-4402
+                    (Kedaluwarsa)</button>
+                </div>
+              </div>
+            </form>
+
+            <div id="beranda-result-area" class="verify-result-panel" aria-live="polite">
+              <div class="state-container state-initial">
+                <span class="material-symbols-outlined state-icon" aria-hidden="true">fingerprint</span>
+                <p class="state-message">Masukkan nomor registrasi sertifikat BNSP Anda di atas untuk memeriksa status
+                  pengesahan.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- BNSP Certification 5-Stage Workflow Guide -->
+      <div class="container section-spacer">
+        <div class="section-header text-center">
+          <div class="section-tag">
+            <span class="material-symbols-outlined tag-icon" aria-hidden="true">flowchart</span>
+            SOP Sertifikasi BNSP
+          </div>
+          <h2 class="section-heading">Tahapan Mengikuti Uji Sertifikasi Kompetensi</h2>
+          <p class="section-subheading">
+            Proses terstandar nasional dari pendaftaran skema hingga pengesahan dan penerbitan sertifikat digital
+            berlogo Garuda.
+          </p>
+        </div>
+
+        <div class="flow-steps-grid five-cols">
+          <div class="flow-step-card">
+            <div class="step-badge font-mono">LANGKAH 1</div>
+            <div class="step-icon-wrap">
+              <span class="material-symbols-outlined" aria-hidden="true">app_registration</span>
+            </div>
+            <h3 class="step-title">Pilih Skema & APL-01</h3>
+            <p class="step-desc">
+              Pilih kualifikasi di katalog skema. Asesi melengkapi data pemohon sertifikasi dan mengunggah portofolio
+              bukti kerja.
+            </p>
+          </div>
+
+          <div class="flow-step-card">
+            <div class="step-badge font-mono">LANGKAH 2</div>
+            <div class="step-icon-wrap">
+              <span class="material-symbols-outlined" aria-hidden="true">checklist</span>
+            </div>
+            <h3 class="step-title">Asesmen Mandiri APL-02</h3>
+            <p class="step-desc">
+              Asesi meninjau setiap unit kompetensi SKKNI dan menyatakan kesiapan bukti (Bukti Kompetensi / BK) secara
+              objektif.
+            </p>
+          </div>
+
+          <div class="flow-step-card">
+            <div class="step-badge font-mono">LANGKAH 3</div>
+            <div class="step-icon-wrap">
+              <span class="material-symbols-outlined" aria-hidden="true">videocam</span>
+            </div>
+            <h3 class="step-title">Uji Teori CBT Online</h3>
+            <p class="step-desc">
+              Ujian berbasis komputer dengan pengawasan kamera langsung dan sistem deteksi perpindahan tab anti
+              kecurangan.
+            </p>
+          </div>
+
+          <div class="flow-step-card">
+            <div class="step-badge font-mono">LANGKAH 4</div>
+            <div class="step-icon-wrap">
+              <span class="material-symbols-outlined" aria-hidden="true">fact_check</span>
+            </div>
+            <h3 class="step-title">Praktik TUK & Pleno</h3>
+            <p class="step-desc">
+              Asesor merekomendasikan status Kompeten (K). Komite Teknis LSP menggelar rapat pleno penetapan hasil
+              sertifikasi.
+            </p>
+          </div>
+
+          <div class="flow-step-card">
+            <div class="step-badge font-mono">LANGKAH 5</div>
+            <div class="step-icon-wrap">
+              <span class="material-symbols-outlined" aria-hidden="true">verified</span>
+            </div>
+            <h3 class="step-title">Terbit Sertifikat Garuda</h3>
+            <p class="step-desc">
+              Sertifikat kompetensi resmi terbit dengan nomor registrasi BNSP nasional dan stempel tanda tangan
+              elektronik bersertifikasi.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ===================================================================
+         TAB: UJIAN ONLINE (CBT PROKTOR KETAT: DETEKSI KAMERA & PINDAH TAB MAX 3X)
+         =================================================================== -->
+    <section id="view-ujian" class="tab-pane" role="tabpanel" aria-labelledby="nav-btn-ujian">
+      <div class="container section-spacer">
+
+        <!-- View State A: Pre-Exam Integrity Lobby & Camera Check -->
+        <div id="exam-lobby-screen" class="exam-screen-block">
+          <div class="section-header text-center">
+            <div class="section-tag exam-live-tag">
+              <span class="material-symbols-outlined tag-icon" aria-hidden="true">security</span>
+              Sistem Pengawasan Asesmen Terpusat (CBT Proktor BNSP)
+            </div>
+            <h1 class="section-heading">Ruang Uji Kompetensi Berproktor Digital</h1>
+            <p class="section-subheading">
+              Sesi uji teori kompetensi resmi berbasis komputer. Pengawasan ketat diterapkan secara otomatis melalui
+              pemantauan kamera video dan pembatasan perpindahan tab browser.
+            </p>
+          </div>
+
+          <div class="exam-lobby-grid">
+
+            <!-- Left: Integrity Rules & Penalty Info -->
+            <div class="card exam-rules-card">
+              <div class="card-header">
+                <div class="card-header-left">
+                  <span class="material-symbols-outlined text-danger" aria-hidden="true">gavel</span>
+                  <h2 class="card-heading">Protokol Integritas & Konsekuensi Pelanggaran</h2>
+                </div>
+                <span class="status-badge badge-warning">Wajib Dipatuhi</span>
+              </div>
+
+              <div class="penalty-alert-banner">
+                <span class="material-symbols-outlined penalty-icon" aria-hidden="true">warning</span>
+                <div>
+                  <strong>PERINGATAN DISKUALIFIKASI (NILAI 0):</strong>
+                  <p>
+                    Sistem mendeteksi setiap perpindahan tab browser atau aplikasi lain. Toleransi maksimal adalah
+                    <strong>3 kali perpindahan</strong>. Jika Anda berpindah tab untuk yang ke-4 kalinya, sesi ujian
+                    otomatis ditutup, dinyatakan <strong>DISKUALIFIKASI</strong>, dan <strong>NILAI OTOMATIS 0</strong>.
+                  </p>
+                </div>
+              </div>
+
+              <ul class="exam-rules-list">
+                <li>
+                  <span class="material-symbols-outlined rule-ico" aria-hidden="true">videocam</span>
+                  <div>
+                    <strong>Kamera Web Pengawas Wajib Terus Menyala</strong>
+                    <span>Wajah asesi harus selalu terlihat jelas di layar selama pengerjaan soal.</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="material-symbols-outlined rule-ico" aria-hidden="true">tab_unselected</span>
+                  <div>
+                    <strong>Batas Pindah Tab Browser: Maksimal 3 Kali</strong>
+                    <span>Membuka tab baru, jendela lain, atau berpindah aplikasi dicatat sebagai pelanggaran
+                      integritas.</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="material-symbols-outlined rule-ico" aria-hidden="true">fullscreen</span>
+                  <div>
+                    <strong>Wajib Berjalan pada Mode Layar Penuh (Fullscreen)</strong>
+                    <span>Keluar dari layar penuh akan memicu verifikasi ulang oleh sistem proktor.</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="material-symbols-outlined rule-ico" aria-hidden="true">block</span>
+                  <div>
+                    <strong>Pencegahan Salin Teks (Anti Copy-Paste)</strong>
+                    <span>Klik kanan, pintasan keyboard salin-tempel, dan screenshot dinonaktifkan di halaman
+                      ujian.</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Right: Camera Verification & Readiness Card -->
+            <div class="card exam-camera-check-card">
+              <div class="card-header">
+                <div class="card-header-left">
+                  <span class="material-symbols-outlined text-primary" aria-hidden="true">photo_camera</span>
+                  <h2 class="card-heading">Uji Perangkat Kamera Asesi</h2>
+                </div>
+                <span id="lobby-cam-badge" class="status-badge badge-warning">Pemeriksaan Lensa</span>
+              </div>
+
+              <!-- Camera Feed Viewport in Lobby -->
+              <div class="cam-preview-box">
+                <video id="lobby-video-preview" autoplay playsinline muted></video>
+                <div id="lobby-cam-placeholder" class="cam-placeholder-overlay">
+                  <span class="material-symbols-outlined" aria-hidden="true">videocam</span>
+                  <p>Kamera belum aktif. Klik tombol aktifkan di bawah untuk memulai pratinjau wajah Anda.</p>
+                </div>
+                <div class="cam-ai-tracker-box">
+                  <div class="ai-reticle"></div>
+                  <span class="ai-status-tag">AI Deteksi Wajah: Siap</span>
+                </div>
+              </div>
+
+              <div class="cam-actions-row">
+                <button type="button" class="btn btn-outline btn-sm btn-block" id="btn-request-webcam">
+                  <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">videocam</span>
+                  Aktifkan & Uji Kamera Saya
+                </button>
+              </div>
+
+              <!-- Candidate Info Checklist -->
+              <div class="candidate-check-meta font-mono text-xs">
+                <div>Skema Uji : SKM-BNSP-CSO-26 (Auditor Forensik Digital)</div>
+                <div>Asesi : Raden Bagus Prakoso, S.Kom</div>
+                <div>Passing Grade : Minimal 80 Poin (Nilai >= 80 Lolos, < 80 Gagal)</div>
+                    <div>Durasi Uji : 15 Menit (5 Butir Soal Terstandar SKKNI)</div>
+                </div>
+
+                <button type="button" class="btn btn-primary btn-block btn-lg mt-3" id="btn-start-active-exam">
+                  <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">play_arrow</span>
+                  Mulai Sesi Ujian Berproktor Ketat
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- View State B: Active Examination Workspace (Strict Mode) -->
+          <div id="exam-active-screen" class="exam-screen-block" style="display:none;">
+
+            <!-- Exam Sticky Top Bar with Strict Anti-Cheat Indicators -->
+            <div class="exam-proctor-topbar">
+              <div class="proctor-bar-left">
+                <div class="exam-live-indicator">
+                  <span class="pulse-red-dot" aria-hidden="true"></span>
+                  <strong>SESI UJIAN BERPROKTOR AKTIF</strong>
+                </div>
+                <span class="exam-scheme-tag font-mono">SKM-BNSP-CSO-26</span>
+              </div>
+
+              <!-- Strike Violations Counter (Max 3 Times) -->
+              <div class="proctor-bar-center">
+                <div class="violation-tracker-widget" id="violation-tracker-box">
+                  <div class="violation-title-row">
+                    <span class="material-symbols-outlined text-warning" aria-hidden="true">warning</span>
+                    <span>Pelanggaran Pindah Tab:</span>
+                    <strong id="violation-count-text" class="font-mono text-danger">0 / 3 Kali</strong>
+                  </div>
+                  <div class="violation-indicators-track">
+                    <span class="strike-dot" id="strike-dot-1" title="Toleransi 1"></span>
+                    <span class="strike-dot" id="strike-dot-2" title="Toleransi 2"></span>
+                    <span class="strike-dot" id="strike-dot-3" title="Toleransi 3"></span>
+                    <span class="strike-dot strike-danger" id="strike-dot-4" title="Diskualifikasi (Nilai 0)"></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Countdown Timer & Actions -->
+              <div class="proctor-bar-right">
+                <div class="timer-countdown-box">
+                  <span class="material-symbols-outlined" aria-hidden="true">timer</span>
+                  <span id="exam-timer-display" class="font-mono timer-value">15:00</span>
+                </div>
+                <button type="button" class="btn btn-outline btn-sm" id="btn-toggle-fullscreen" title="Layar Penuh">
+                  <span class="material-symbols-outlined" aria-hidden="true">fullscreen</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Exam Main Grid: Questions & Proctoring Sidebar -->
+            <div class="exam-workspace-grid">
+
+              <!-- Left: Question Viewport -->
+              <div class="card exam-question-card" id="exam-question-container">
+
+                <div class="question-header-row">
+                  <div class="q-number-badge">
+                    Soal No. <span id="current-q-index">1</span> dari <span id="total-q-count">5</span>
+                  </div>
+                  <div class="q-actions-quick">
+                    <button type="button" class="btn btn-outline btn-sm" id="btn-flag-doubt">
+                      <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">bookmark</span>
+                      <span id="flag-doubt-text">Tandai Ragu-ragu</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Question Text & SKKNI Code Reference -->
+                <div class="question-body">
+                  <span class="q-unit-code font-mono" id="q-unit-ref">Unit: J.622000.001.01</span>
+                  <h2 class="q-prompt" id="q-prompt-text">
+                    Memuat butir pertanyaan asesmen kompetensi...
+                  </h2>
+
+                  <!-- Multiple Choice Options -->
+                  <div class="options-container" id="options-list-container" role="radiogroup"
+                    aria-labelledby="q-prompt-text">
+                    <!-- Injected via JavaScript -->
+                  </div>
+                </div>
+
+                <!-- Navigation Controls -->
+                <div class="question-footer-nav">
+                  <button type="button" class="btn btn-outline" id="btn-prev-question">
+                    <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">arrow_back</span>
+                    Soal Sebelumnya
+                  </button>
+                  <div class="footer-center-note text-xs text-subtle font-mono">
+                    Jawaban otomatis tersimpan pada server LSP
+                  </div>
+                  <button type="button" class="btn btn-primary" id="btn-next-question">
+                    Soal Berikutnya
+                    <span class="material-symbols-outlined btn-icon-end" aria-hidden="true">arrow_forward</span>
+                  </button>
+                </div>
+
+              </div>
+
+              <!-- Right Sidebar: Camera Feed & Question Navigator -->
+              <div class="exam-sidebar-proctor">
+
+                <!-- Live Video Feed Box -->
+                <div class="card proctor-video-card">
+                  <div class="proctor-video-header">
+                    <span class="live-rec-badge">
+                      <span class="rec-dot"></span>
+                      REC LIVE
+                    </span>
+                    <span class="font-mono text-xs">AI Face Monitor</span>
+                  </div>
+                  <div class="proctor-stream-box">
+                    <video id="active-exam-video" autoplay playsinline muted></video>
+                    <div class="ai-stream-overlay">
+                      <div class="face-target-box"></div>
+                      <span class="face-status-text">Status: 1 Wajah Terdeteksi</span>
+                    </div>
+                  </div>
+                  <div class="proctor-stream-footer">
+                    <span class="text-xs text-subtle">Asesor Pemantau: <strong>Aktif</strong></span>
+                    <span class="material-symbols-outlined text-success" style="font-size:1.1rem;"
+                      aria-hidden="true">check_circle</span>
+                  </div>
+                </div>
+
+                <!-- Question Navigator Palette -->
+                <div class="card exam-palette-card">
+                  <h3 class="palette-title">Navigasi Nomor Soal</h3>
+                  <div class="palette-grid" id="question-nav-palette">
+                    <!-- Injected dynamically: buttons 1 to 5 -->
+                  </div>
+
+                  <div class="palette-legend">
+                    <div class="legend-item"><span class="legend-swatch answered"></span> Dijawab</div>
+                    <div class="legend-item"><span class="legend-swatch doubtful"></span> Ragu-ragu</div>
+                    <div class="legend-item"><span class="legend-swatch unanswered"></span> Belum</div>
+                  </div>
+
+                  <button type="button" class="btn btn-danger btn-block mt-3" id="btn-finish-exam-trigger">
+                    <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">task_alt</span>
+                    Selesaikan Ujian Sekarang
+                  </button>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- View State C: Exam Result Screen (Normal Completion OR Disqualification Score 0) -->
+          <div id="exam-result-screen" class="exam-screen-block" style="display:none;">
+            <div class="exam-result-container" id="exam-result-card-wrap">
+              <!-- Dynamically populated by app.js (Normal Score or Disqualification Nilai 0) -->
+            </div>
+          </div>
+
+        </div>
+    </section>
+
+    <!-- Strict Tab Violation Alert Modal (Triggers on each tab switch) -->
+    <div id="tab-violation-modal" class="modal-overlay violation-modal-overlay" role="alertdialog" aria-modal="true"
+      aria-labelledby="violation-modal-title" aria-hidden="true">
+      <div class="modal-card violation-card">
+        <div class="violation-modal-header">
+          <div class="siren-icon-wrap">
+            <span class="material-symbols-outlined siren-icon" aria-hidden="true">warning</span>
+          </div>
+          <div>
+            <h2 id="violation-modal-title" class="violation-header-title">PERINGATAN PELANGGARAN INTEGRITAS!</h2>
+            <span class="violation-header-sub">Terdeteksi Aktivitas Berpindah Tab atau Aplikasi</span>
+          </div>
+        </div>
+
+        <div class="modal-body violation-body">
+          <div class="violation-count-highlight">
+            <span class="v-label">Jumlah Pelanggaran Anda Saat Ini:</span>
+            <div class="v-numbers font-mono" id="modal-violation-stat">
+              <span id="modal-current-strikes">1</span> dari 3 Kali Batas Toleransi
+            </div>
+          </div>
+
+          <div class="violation-explain-box">
+            <p>
+              Anda terdeteksi meninggalkan jendela ujian aktif. Sistem CBT BNSP mencatat stempel waktu kejadian ini
+              secara otomatis ke dalam log berita acara pengawasan.
+            </p>
+            <div class="penalty-warning-text">
+              <span class="material-symbols-outlined" aria-hidden="true">gavel</span>
+              <strong>Perhatian Keras:</strong> Jika pelanggaran mencapai 4 kali, sesi Anda akan langsung dihentikan dan
+              <strong>NILAI OTOMATIS 0 (DISKUALIFIKASI)</strong>.
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer violation-footer">
+          <button type="button" class="btn btn-danger btn-block btn-lg" id="btn-ack-violation">
+            <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">verified_user</span>
+            Saya Mengerti dan Kembali Mengerjakan Ujian
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Confirmation Modal: Selesaikan Ujian -->
+    <div id="confirm-finish-modal" class="modal-overlay" role="dialog" aria-modal="true"
+      aria-labelledby="finish-modal-title" aria-hidden="true">
+      <div class="modal-card">
+        <div class="modal-header">
+          <div class="modal-title-wrap">
+            <span class="material-symbols-outlined text-primary" aria-hidden="true">help</span>
+            <h2 id="finish-modal-title" class="modal-title">Konfirmasi Penyelesaian Ujian</h2>
+          </div>
+          <button type="button" id="close-finish-modal-btn" class="modal-close-btn btn-icon" aria-label="Batal">
+            <span class="material-symbols-outlined" aria-hidden="true">close</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="text-sm text-muted mb-3">
+            Apakah Anda yakin ingin mengakhiri sesi ujian online ini? Pastikan seluruh butir soal telah diperiksa dengan
+            seksama.
+          </p>
+          <div class="confirm-summary-box font-mono text-sm" id="finish-summary-stats">
+            <div>Total Soal : 5 Butir</div>
+            <div>Terjawab : <span id="summary-answered-count">0</span> Butir</div>
+            <div>Ragu-ragu : <span id="summary-doubt-count">0</span> Butir</div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" id="btn-cancel-finish">Kembali Memeriksa</button>
+          <button type="button" class="btn btn-primary" id="btn-confirm-submit-exam">
+            <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">check</span>
+            Kirim Jawaban & Lihat Hasil
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================================================================
+         TAB 2: KATALOG
+         =================================================================== -->
+    <section id="view-katalog" class="tab-pane" role="tabpanel" aria-labelledby="nav-btn-katalog">
+      <div class="container section-spacer">
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="material-symbols-outlined tag-icon" aria-hidden="true">library_books</span>
+            Standar Kompetensi Kerja Nasional Indonesia (SKKNI)
+          </div>
+          <h1 class="section-heading">Katalog Skema Uji Sertifikasi BNSP</h1>
+          <p class="section-subheading">
+            Daftar skema sertifikasi okupasi dan klaster berlisensi BNSP. Setiap skema dirancang sesuai kebutuhan
+            industri teknologi dan diakui secara nasional serta regional ASEAN.
+          </p>
+
+          <!-- Category Filter Tabs -->
+          <div class="catalog-tabs" role="tablist" aria-label="Filter Kategori Skema BNSP">
+            <button type="button" role="tab" class="tab-btn active" aria-selected="true" data-filter="all">Semua
+              Kategori</button>
+            <button type="button" role="tab" class="tab-btn" aria-selected="false" data-filter="cyber">Keamanan
+              Siber</button>
+            <button type="button" role="tab" class="tab-btn" aria-selected="false" data-filter="ai">Kecerdasan
+              Buatan</button>
+            <button type="button" role="tab" class="tab-btn" aria-selected="false" data-filter="software">Rekayasa
+              Perangkat Lunak</button>
+            <button type="button" role="tab" class="tab-btn" aria-selected="false" data-filter="data">Tata Kelola
+              Data</button>
+          </div>
+        </div>
+
+        <!-- Catalog Items Grid -->
+        <div class="catalog-grid" id="full-catalog-grid">
+
+          <!-- Skema 1 -->
+          <article class="cert-catalog-card" data-category="cyber">
+            <div class="card-top">
+              <span class="cert-badge-category">Keamanan Siber</span>
+              <span class="code-pill font-mono">SKM-BNSP-CSO-26</span>
+            </div>
+            <div class="cert-card-media">
+              <img src="assets/images/cyber-security-lab.jpg"
+                alt="Pelatihan uji forensik digital dan analisis tanggap insiden di laboratorium keamanan siber TUK"
+                width="600" height="338" loading="lazy">
+            </div>
+            <h2 class="card-title">Auditor Forensik Digital & Tanggap Insiden Siber</h2>
+            <p class="card-description">
+              Menguji kompetensi penanganan insiden kebocoran data, pemulihan barang bukti elektronik, analisis log
+              serangan, dan pembuatan berita acara forensik hukum.
+            </p>
+            <div class="card-skkni-info">
+              <span class="skkni-badge font-mono">SKKNI No. 145/2021</span>
+              <span class="units-badge">8 Unit Kompetensi</span>
+              <span class="level-badge font-mono">KKNI Level 6</span>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-outline btn-sm btn-view-scheme-units" data-scheme-id="CSO-26">
+                <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">list_alt</span>
+                Daftar Unit & Pelatihan
+              </button>
+              <button type="button" class="btn btn-primary btn-sm btn-register-scheme"
+                data-scheme-title="Auditor Forensik Digital & Tanggap Insiden Siber" data-scheme-code="SKM-BNSP-CSO-26">
+                <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">how_to_reg</span>
+                Daftar Asesmen
+              </button>
+            </div>
+          </article>
+
+          <!-- Skema 2 -->
+          <article class="cert-catalog-card" data-category="ai">
+            <div class="card-top">
+              <span class="cert-badge-category">Kecerdasan Buatan</span>
+              <span class="code-pill font-mono">SKM-BNSP-MLE-04</span>
+            </div>
+            <div class="cert-card-media">
+              <img src="assets/images/ai-ml-workshop.jpg"
+                alt="Lokakarya pelatihan perekayasa model pembelajaran mesin dan rekayasa fitur data AI" width="600"
+                height="338" loading="lazy">
+            </div>
+            <h2 class="card-title">Perekayasa Model Pembelajaran Mesin (ML Engineer)</h2>
+            <p class="card-description">
+              Asesmen kemampuan merancang pipeline rekayasa fitur data, melatih model klasifikasi/regresi, penyetelan
+              hyperparameter, dan deployment model pada produksi skala besar.
+            </p>
+            <div class="card-skkni-info">
+              <span class="skkni-badge font-mono">SKKNI No. 299/2020</span>
+              <span class="units-badge">7 Unit Kompetensi</span>
+              <span class="level-badge font-mono">KKNI Level 6</span>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-outline btn-sm btn-view-scheme-units" data-scheme-id="MLE-04">
+                <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">list_alt</span>
+                Daftar Unit & Pelatihan
+              </button>
+              <button type="button" class="btn btn-primary btn-sm btn-register-scheme"
+                data-scheme-title="Perekayasa Model Pembelajaran Mesin (ML Engineer)"
+                data-scheme-code="SKM-BNSP-MLE-04">
+                <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">how_to_reg</span>
+                Daftar Asesmen
+              </button>
+            </div>
+          </article>
+
+          <!-- Skema 3 -->
+          <article class="cert-catalog-card" data-category="software">
+            <div class="card-top">
+              <span class="cert-badge-category">Rekayasa Lunak</span>
+              <span class="code-pill font-mono">SKM-BNSP-SWA-01</span>
+            </div>
+            <div class="cert-card-media">
+              <img src="assets/images/software-architecture.jpg"
+                alt="Pelatihan arsitektur rekayasa perangkat lunak skala enterprise dan integrasi microservices"
+                width="600" height="338" loading="lazy">
+            </div>
+            <h2 class="card-title">Arsitek Solusi Perangkat Lunak Skala Besar</h2>
+            <p class="card-description">
+              Evaluasi kualifikasi perencanaan struktur arsitektur microservices terdistribusi, strategi redundansi
+              sistem toleran kegagalan, dan ketahanan throughput tinggi.
+            </p>
+            <div class="card-skkni-info">
+              <span class="skkni-badge font-mono">SKKNI No. 044/2020</span>
+              <span class="units-badge">10 Unit Kompetensi</span>
+              <span class="level-badge font-mono">KKNI Level 7</span>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-outline btn-sm btn-view-scheme-units" data-scheme-id="SWA-01">
+                <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">list_alt</span>
+                Daftar Unit & Pelatihan
+              </button>
+              <button type="button" class="btn btn-primary btn-sm btn-register-scheme"
+                data-scheme-title="Arsitek Solusi Perangkat Lunak Skala Besar" data-scheme-code="SKM-BNSP-SWA-01">
+                <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">how_to_reg</span>
+                Daftar Asesmen
+              </button>
+            </div>
+          </article>
+
+          <!-- Skema 4 -->
+          <article class="cert-catalog-card" data-category="data">
+            <div class="card-top">
+              <span class="cert-badge-category">Tata Kelola Data</span>
+              <span class="code-pill font-mono">SKM-BNSP-DPO-08</span>
+            </div>
+            <div class="cert-card-media">
+              <img src="assets/images/data-protection.jpg"
+                alt="Pelatihan kepatuhan regulasi perlindungan data pribadi UU PDP dan audit pemrosesan data"
+                width="600" height="338" loading="lazy">
+            </div>
+            <h2 class="card-title">Petugas Perlindungan Data Pribadi (DPO)</h2>
+            <p class="card-description">
+              Validasi kompetensi kepatuhan terhadap amanat UU Perlindungan Data Pribadi (UU No. 27/2022), penyusunan
+              dokumen DPIA, dan audit hak akses pemilik data.
+            </p>
+            <div class="card-skkni-info">
+              <span class="skkni-badge font-mono">SKKNI No. 103/2023</span>
+              <span class="units-badge">6 Unit Kompetensi</span>
+              <span class="level-badge font-mono">KKNI Level 6</span>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-outline btn-sm btn-view-scheme-units" data-scheme-id="DPO-08">
+                <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">list_alt</span>
+                Daftar Unit & Pelatihan
+              </button>
+              <button type="button" class="btn btn-primary btn-sm btn-register-scheme"
+                data-scheme-title="Petugas Perlindungan Data Pribadi (DPO)" data-scheme-code="SKM-BNSP-DPO-08">
+                <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">how_to_reg</span>
+                Daftar Asesmen
+              </button>
+            </div>
+          </article>
+
+          <!-- Skema 5 -->
+          <article class="cert-catalog-card" data-category="software">
+            <div class="card-top">
+              <span class="cert-badge-category">Rekayasa Lunak</span>
+              <span class="code-pill font-mono">SKM-BNSP-DEV-02</span>
+            </div>
+            <div class="cert-card-media">
+              <img src="assets/images/web-dev-training.jpg"
+                alt="Pelatihan pengembang aplikasi web tingkat lanjut arsitektur frontend backend dan CI CD" width="600"
+                height="338" loading="lazy">
+            </div>
+            <h2 class="card-title">Pengembang Aplikasi Web Tingkat Lanjut (Lead Fullstack)</h2>
+            <p class="card-description">
+              Uji kemampuan penulisan kode terstruktur, implementasi API aman (OAuth 2.0 / JWT), integrasi pipeline
+              CI/CD, dan otomatisasi pengujian beban perangkat lunak.
+            </p>
+            <div class="card-skkni-info">
+              <span class="skkni-badge font-mono">SKKNI No. 044/2020</span>
+              <span class="units-badge">9 Unit Kompetensi</span>
+              <span class="level-badge font-mono">KKNI Level 5</span>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-outline btn-sm btn-view-scheme-units" data-scheme-id="DEV-02">
+                <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">list_alt</span>
+                Daftar Unit & Pelatihan
+              </button>
+              <button type="button" class="btn btn-primary btn-sm btn-register-scheme"
+                data-scheme-title="Pengembang Aplikasi Web Tingkat Lanjut" data-scheme-code="SKM-BNSP-DEV-02">
+                <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">how_to_reg</span>
+                Daftar Asesmen
+              </button>
+            </div>
+          </article>
+
+          <!-- Skema 6 -->
+          <article class="cert-catalog-card" data-category="cyber">
+            <div class="card-top">
+              <span class="cert-badge-category">Keamanan Siber</span>
+              <span class="code-pill font-mono">SKM-BNSP-NET-07</span>
+            </div>
+            <div class="cert-card-media">
+              <img src="assets/images/network-security.jpg"
+                alt="Pelatihan pertahanan jaringan komputer konfigurasi firewall dan pencegahan intrusi IDS IPS"
+                width="600" height="338" loading="lazy">
+            </div>
+            <h2 class="card-title">Administrator Pertahanan Jaringan Komputer</h2>
+            <p class="card-description">
+              Asesmen konfigurasi Firewall Layer 7, sistem pencegahan intrusi (IPS/IDS), segmentasi jaringan Zero Trust,
+              dan manajemen sertifikat enkripsi VPN korporasi.
+            </p>
+            <div class="card-skkni-info">
+              <span class="skkni-badge font-mono">SKKNI No. 321/2016</span>
+              <span class="units-badge">7 Unit Kompetensi</span>
+              <span class="level-badge font-mono">KKNI Level 5</span>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-outline btn-sm btn-view-scheme-units" data-scheme-id="NET-07">
+                <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">list_alt</span>
+                Daftar Unit & Pelatihan
+              </button>
+              <button type="button" class="btn btn-primary btn-sm btn-register-scheme"
+                data-scheme-title="Administrator Pertahanan Jaringan Komputer" data-scheme-code="SKM-BNSP-NET-07">
+                <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">how_to_reg</span>
+                Daftar Asesmen
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         TAB 3: JADWAL & MATERI
+         =================================================================== -->
+    <section id="view-jadwal" class="tab-pane" role="tabpanel" aria-labelledby="nav-btn-jadwal">
+      <div class="container section-spacer">
+
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="material-symbols-outlined tag-icon" aria-hidden="true">event</span>
+            Tempat Uji Kompetensi (TUK) Resmi
+          </div>
+          <h1 class="section-heading">Jadwal Uji Kompetensi & Unduhan Materi BNSP</h1>
+          <p class="section-subheading">
+            Pilih jadwal uji terdekat di Tempat Uji Kompetensi (TUK) terverifikasi. Pastikan Anda telah mengunduh dan
+            mempelajari berkas APL-01 dan APL-02 sebelum hari asesmen.
+          </p>
+        </div>
+
+        <!-- Downloadable Assessment Materials / Formulir APL -->
+        <div class="materials-box mb-4">
+          <div class="materials-header">
+            <span class="material-symbols-outlined text-primary" aria-hidden="true">folder_zip</span>
+            <div>
+              <h2 class="materials-title">Dokumen Resmi Pra-Asesmen & Formulir Wajib</h2>
+              <p class="text-sm text-muted">Unduh dan siapkan berkas kelengkapan bukti portofolio sebelum menghadiri
+                asesmen di TUK.</p>
+            </div>
+          </div>
+
+          <div class="download-grid">
+            <div class="download-card">
+              <div class="dl-icon-col">
+                <span class="material-symbols-outlined" aria-hidden="true">description</span>
+              </div>
+              <div class="dl-info-col">
+                <strong class="dl-title">Formulir APL-01 (Permohonan Sertifikasi)</strong>
+                <span class="dl-meta font-mono">Format: PDF / Formulir Isian Resmi BNSP</span>
+              </div>
+              <button type="button" class="btn btn-outline btn-sm btn-download-file"
+                data-doc="APL-01-Permohonan-Sertifikasi-BNSP.pdf">
+                <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">download</span>
+                Unduh
+              </button>
+            </div>
+
+            <div class="download-card">
+              <div class="dl-icon-col">
+                <span class="material-symbols-outlined" aria-hidden="true">fact_check</span>
+              </div>
+              <div class="dl-info-col">
+                <strong class="dl-title">Formulir APL-02 (Asesmen Mandiri Asesi)</strong>
+                <span class="dl-meta font-mono">Format: PDF / Daftar Cek Unit Kompetensi</span>
+              </div>
+              <button type="button" class="btn btn-outline btn-sm btn-download-file"
+                data-doc="APL-02-Asesmen-Mandiri-Kuk.pdf">
+                <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">download</span>
+                Unduh
+              </button>
+            </div>
+
+            <div class="download-card">
+              <div class="dl-icon-col">
+                <span class="material-symbols-outlined" aria-hidden="true">menu_book</span>
+              </div>
+              <div class="dl-info-col">
+                <strong class="dl-title">Buku Pedoman Tata Tertib Peserta di TUK</strong>
+                <span class="dl-meta font-mono">Format: PDF / Standar Operasional Prosedur</span>
+              </div>
+              <button type="button" class="btn btn-outline btn-sm btn-download-file"
+                data-doc="Pedoman-Asesi-TUK-BNSP.pdf">
+                <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">download</span>
+                Unduh
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- TUK Facility & Training Environment Showcase -->
+        <div class="tuk-facility-banner">
+          <div class="tuk-facility-grid">
+            <div class="tuk-media-wrap">
+              <img src="assets/images/tuk-training-hall.jpg"
+                alt="Ruang laboratorium komputer Tempat Uji Kompetensi TUK resmi berstandar BNSP" width="600"
+                height="375" loading="lazy">
+              <span class="tuk-media-badge font-mono">
+                <span class="material-symbols-outlined" aria-hidden="true">verified</span>
+                TUK Terakreditasi BNSP
+              </span>
+            </div>
+            <div class="tuk-facility-content">
+              <div class="section-tag mb-2">
+                <span class="material-symbols-outlined tag-icon" aria-hidden="true">domain</span>
+                Infrastruktur Uji Praktik Standar Industri
+              </div>
+              <h2 class="tuk-facility-title">Sarana & Prasarana Pelatihan Uji Kompetensi Laboratorium</h2>
+              <p class="tuk-facility-desc">
+                Setiap Tempat Uji Kompetensi (TUK) mandiri maupun sewaktu difasilitasi perangkat kerja berstandar SKKNI.
+                Peserta didukung workstation Core i7/32GB RAM, jaringan berkeamanan terisolasi, serta server simulasi
+                untuk uji unjuk kerja langsung.
+              </p>
+              <div class="facility-perks-list">
+                <div class="perk-item">
+                  <span class="material-symbols-outlined" aria-hidden="true">router</span>
+                  <span>Perangkat Jaringan & Firewall Fisik Enterprise Berlisensi</span>
+                </div>
+                <div class="perk-item">
+                  <span class="material-symbols-outlined" aria-hidden="true">speed</span>
+                  <span>Koneksi Fiber Optik Dedicated 1 Gbps Redundant Rendah Latensi</span>
+                </div>
+                <div class="perk-item">
+                  <span class="material-symbols-outlined" aria-hidden="true">videocam</span>
+                  <span>Kamera Pengawasan 360 Derajat & Asesor Bersertifikat BNSP</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Schedule Filter Controls & Timeline List -->
+        <div class="schedule-filter-bar">
+          <div class="schedule-search-wrap">
+            <span class="material-symbols-outlined search-icon" aria-hidden="true">search</span>
+            <input type="text" id="schedule-search-input" class="form-input"
+              placeholder="Cari skema, kota, atau nama TUK...">
+          </div>
+          <div class="schedule-location-chips" role="group" aria-label="Filter Lokasi TUK">
+            <button type="button" class="schedule-loc-btn active" data-loc="all">Semua Lokasi</button>
+            <button type="button" class="schedule-loc-btn" data-loc="jakarta">DKI Jakarta</button>
+            <button type="button" class="schedule-loc-btn" data-loc="bandung">Bandung</button>
+            <button type="button" class="schedule-loc-btn" data-loc="surabaya">Surabaya</button>
+            <button type="button" class="schedule-loc-btn" data-loc="daring">Asesmen Jarak Jauh</button>
+          </div>
+        </div>
+
+        <!-- Schedule Table / Cards List -->
+        <div class="schedule-cards-list" id="schedule-container">
+
+          <!-- Schedule Item 1 -->
+          <article class="schedule-row-card" data-loc="jakarta" data-scheme="SWE-ARCH-01">
+            <div class="schedule-date-col">
+              <span class="sched-day">28</span>
+              <span class="sched-month">MAR 2026</span>
+              <span class="sched-time font-mono">08.30 WIB</span>
+            </div>
+            <div class="schedule-info-col">
+              <div class="sched-badge-row">
+                <span class="status-badge badge-warning">Pendaftaran Dibuka</span>
+                <span class="tuk-badge font-mono">TUK Mandiri Cyber Jakarta</span>
+                <span class="quota-badge">Sisa Kuota: 4 Kursi</span>
+              </div>
+              <h3 class="sched-title">Arsitek Solusi Perangkat Lunak Skala Besar (SWE-ARCH-01)</h3>
+              <p class="sched-desc">
+                Metode Asesmen: Demonstrasi Proyek Desain Arsitektur, Uji Lisan Kasus Skalabilitas, Verifikasi Bukti
+                Portofolio Kerja.
+              </p>
+            </div>
+            <div class="schedule-action-col">
+              <button type="button" class="btn btn-primary btn-sm btn-join-schedule" data-session="SWE-JKT-28MAR">
+                <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">event_available</span>
+                Pilih Sesi Ini
+              </button>
+            </div>
+          </article>
+
+          <!-- Schedule Item 2 -->
+          <article class="schedule-row-card" data-loc="jakarta" data-scheme="CSO-26">
+            <div class="schedule-date-col">
+              <span class="sched-day">05</span>
+              <span class="sched-month">APR 2026</span>
+              <span class="sched-time font-mono">09.00 WIB</span>
+            </div>
+            <div class="schedule-info-col">
+              <div class="sched-badge-row">
+                <span class="status-badge badge-success">Pendaftaran Dibuka</span>
+                <span class="tuk-badge font-mono">TUK Sewaktu Kemkomdigi Jakarta</span>
+                <span class="quota-badge">Sisa Kuota: 8 Kursi</span>
+              </div>
+              <h3 class="sched-title">Auditor Forensik Digital & Tanggap Insiden Siber (CSO-26)</h3>
+              <p class="sched-desc">
+                Metode Asesmen: Praktik Laboratorium Penanganan Bukti Digital, Ekstraksi Image Memori, Analisis Jejak
+                Intrusi Jaringan.
+              </p>
+            </div>
+            <div class="schedule-action-col">
+              <button type="button" class="btn btn-primary btn-sm btn-join-schedule" data-session="CSO-JKT-05APR">
+                <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">event_available</span>
+                Pilih Sesi Ini
+              </button>
+            </div>
+          </article>
+
+          <!-- Schedule Item 3 -->
+          <article class="schedule-row-card" data-loc="bandung" data-scheme="MLE-04">
+            <div class="schedule-date-col">
+              <span class="sched-day">12</span>
+              <span class="sched-month">APR 2026</span>
+              <span class="sched-time font-mono">08.30 WIB</span>
+            </div>
+            <div class="schedule-info-col">
+              <div class="sched-badge-row">
+                <span class="status-badge badge-success">Pendaftaran Dibuka</span>
+                <span class="tuk-badge font-mono">TUK Mandiri Telkom ITB Bandung</span>
+                <span class="quota-badge">Sisa Kuota: 6 Kursi</span>
+              </div>
+              <h3 class="sched-title">Perekayasa Model Pembelajaran Mesin - ML Engineer (MLE-04)</h3>
+              <p class="sched-desc">
+                Metode Asesmen: Pembuktian Pipeline MLOps Langsung di Sandbox Server Uji, Uji Pengetahuan Teoretis
+                Optimasi Parameter.
+              </p>
+            </div>
+            <div class="schedule-action-col">
+              <button type="button" class="btn btn-primary btn-sm btn-join-schedule" data-session="MLE-BDG-12APR">
+                <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">event_available</span>
+                Pilih Sesi Ini
+              </button>
+            </div>
+          </article>
+
+          <!-- Schedule Item 4 -->
+          <article class="schedule-row-card" data-loc="daring" data-scheme="DPO-08">
+            <div class="schedule-date-col">
+              <span class="sched-day">18</span>
+              <span class="sched-month">APR 2026</span>
+              <span class="sched-time font-mono">09.30 WIB</span>
+            </div>
+            <div class="schedule-info-col">
+              <div class="sched-badge-row">
+                <span class="status-badge badge-success">Asesmen Daring (Online)</span>
+                <span class="tuk-badge font-mono">TUK Virtual LSP SertifikaNet</span>
+                <span class="tuk-badge font-mono">TUK Virtual LSP CertiSkill</span>
+                <span class="quota-badge">Sisa Kuota: 10 Kursi</span>
+              </div>
+              <h3 class="sched-title">Petugas Perlindungan Data Pribadi - DPO (DPO-08)</h3>
+              <p class="sched-desc">
+                Metode Asesmen: Presentasi Studi Kasus Kebijakan Privasi (DPIA), Wawancara Mendalam Asesor melalui
+                Konferensi Video Aman.
+              </p>
+            </div>
+            <div class="schedule-action-col">
+              <button type="button" class="btn btn-primary btn-sm btn-join-schedule" data-session="DPO-VIR-18APR">
+                <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">event_available</span>
+                Pilih Sesi Ini
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         TAB 4: SERTIFIKASI (LIST SERTIFIKAT YANG SUDAH DIDAPATKAN)
+         =================================================================== -->
+    <section id="view-sertifikasi" class="tab-pane" role="tabpanel" aria-labelledby="nav-btn-sertifikasi">
+      <div class="container section-spacer">
+
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="material-symbols-outlined tag-icon" aria-hidden="true">military_tech</span>
+            Dokumen Kredensial Resmi Asesi
+          </div>
+          <h1 class="section-heading">Koleksi Sertifikat Kompetensi BNSP Anda</h1>
+          <p class="section-subheading">
+            Daftar sertifikat kompetensi kerja yang telah dinyatakan Kompeten (K) oleh Dewan Pleno LSP dan disahkan oleh
+            Badan Nasional Sertifikasi Profesi.
+          </p>
+        </div>
+
+        <!-- Asesi Credential Identity Card -->
+        <div class="asesi-id-card mb-4">
+          <div class="asesi-id-left">
+            <div class="user-avatar-initial xl">RB</div>
+            <div class="asesi-id-data">
+              <h2 class="asesi-name">Raden Bagus Prakoso, S.Kom</h2>
+              <div class="asesi-tags-row">
+                <span class="font-mono text-sm">NIK: 327320******0004</span>
+                <span class="font-mono text-sm">No Reg Asesi: BNSP-ID-2026-0912</span>
+                <span class="status-badge badge-success">Asesi Aktif Terdaftar</span>
+              </div>
+            </div>
+          </div>
+          <div class="asesi-id-actions">
+            <button type="button" class="btn btn-outline btn-sm" id="btn-copy-public-portfolio">
+              <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">share</span>
+              Bagikan Portofolio Kredensial
+            </button>
+          </div>
+        </div>
+
+        <!-- Certificate Cards List (User's Earned Certificates) -->
+        <div class="earned-certs-grid">
+
+          <!-- Certificate 1: Active Cybersecurity -->
+          <article class="earned-cert-card" id="cert-item-8891">
+            <div class="earned-cert-header">
+              <div class="cert-gov-badge">
+                <span class="material-symbols-outlined" aria-hidden="true">verified</span>
+                <span>SERTIFIKAT RESMI BNSP</span>
+              </div>
+              <span class="status-badge badge-success">Masa Berlaku Aktif</span>
+            </div>
+
+            <div class="earned-cert-content">
+              <span class="earned-cert-scheme-code font-mono">No Reg: MET.000.004891 2026</span>
+              <h3 class="earned-cert-title">Arsitektur Keamanan Awan & Perlindungan Data</h3>
+              <p class="earned-cert-issuer">
+                Diterbitkan oleh: Lembaga Sertifikasi Profesi Teknologi Digital Nasional
+              </p>
+
+              <div class="earned-cert-meta-grid">
+                <div>
+                  <span class="earned-meta-k">Nomor Seri:</span>
+                  <span class="earned-meta-v font-mono">CERT-2026-8891</span>
+                </div>
+                <div>
+                  <span class="earned-meta-k">Tanggal Terbit:</span>
+                  <span class="earned-meta-v">14 Februari 2026</span>
+                </div>
+                <div>
+                  <span class="earned-meta-k">Berlaku Hingga:</span>
+                  <span class="earned-meta-v">14 Februari 2029</span>
+                </div>
+                <div>
+                  <span class="earned-meta-k">Stempel SHA-256:</span>
+                  <span class="earned-meta-v font-mono">7e2f...91a0</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="earned-cert-footer">
+              <button type="button" class="btn btn-primary btn-sm btn-open-cert-details" data-cert-id="CERT-2026-8891">
+                <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">visibility</span>
+                Lihat Detail Unit & QR
+              </button>
+              <button type="button" class="btn btn-outline btn-sm btn-download-cert" data-cert-id="CERT-2026-8891">
+                <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">download</span>
+                Unduh PDF
+              </button>
+            </div>
+          </article>
+
+          <!-- Certificate 2: Active Machine Learning -->
+          <article class="earned-cert-card" id="cert-item-5519">
+            <div class="earned-cert-header">
+              <div class="cert-gov-badge">
+                <span class="material-symbols-outlined" aria-hidden="true">verified</span>
+                <span>SERTIFIKAT RESMI BNSP</span>
+              </div>
+              <span class="status-badge badge-success">Masa Berlaku Aktif</span>
+            </div>
+
+            <div class="earned-cert-content">
+              <span class="earned-cert-scheme-code font-mono">No Reg: MET.000.005519 2025</span>
+              <h3 class="earned-cert-title">Perekayasa Model Pembelajaran Mesin (ML Engineer)</h3>
+              <p class="earned-cert-issuer">
+                Diterbitkan oleh: Lembaga Sertifikasi Kecerdasan Buatan Terapan
+              </p>
+
+              <div class="earned-cert-meta-grid">
+                <div>
+                  <span class="earned-meta-k">Nomor Seri:</span>
+                  <span class="earned-meta-v font-mono">CERT-2025-5519</span>
+                </div>
+                <div>
+                  <span class="earned-meta-k">Tanggal Terbit:</span>
+                  <span class="earned-meta-v">18 Mei 2025</span>
+                </div>
+                <div>
+                  <span class="earned-meta-k">Berlaku Hingga:</span>
+                  <span class="earned-meta-v">18 Mei 2028</span>
+                </div>
+                <div>
+                  <span class="earned-meta-k">Stempel SHA-256:</span>
+                  <span class="earned-meta-v font-mono">4f81...7561</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="earned-cert-footer">
+              <button type="button" class="btn btn-primary btn-sm btn-open-cert-details" data-cert-id="CERT-2025-5519">
+                <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">visibility</span>
+                Lihat Detail Unit & QR
+              </button>
+              <button type="button" class="btn btn-outline btn-sm btn-download-cert" data-cert-id="CERT-2025-5519">
+                <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">download</span>
+                Unduh PDF
+              </button>
+            </div>
+          </article>
+
+          <!-- Certificate 3: Expired Certificate -->
+          <article class="earned-cert-card opacity-muted" id="cert-item-4402">
+            <div class="earned-cert-header">
+              <div class="cert-gov-badge">
+                <span class="material-symbols-outlined" aria-hidden="true">history</span>
+                <span>ARSIP SERTIFIKASI</span>
+              </div>
+              <span class="status-badge badge-expired">Masa Berlaku Berakhir</span>
+            </div>
+
+            <div class="earned-cert-content">
+              <span class="earned-cert-scheme-code font-mono">No Reg: MET.000.001102 2023</span>
+              <h3 class="earned-cert-title">Petugas Perlindungan Data Pribadi (DPO)</h3>
+              <p class="earned-cert-issuer">
+                Diterbitkan oleh: Lembaga Sertifikasi Tata Kelola Kepatuhan Digital
+              </p>
+
+              <div class="earned-cert-meta-grid">
+                <div>
+                  <span class="earned-meta-k">Nomor Seri:</span>
+                  <span class="earned-meta-v font-mono">CERT-2024-4402</span>
+                </div>
+                <div>
+                  <span class="earned-meta-k">Tanggal Terbit:</span>
+                  <span class="earned-meta-v">10 Januari 2024</span>
+                </div>
+                <div>
+                  <span class="earned-meta-k">Berlaku Hingga:</span>
+                  <span class="earned-meta-v">10 Januari 2026</span>
+                </div>
+                <div>
+                  <span class="earned-meta-k">Status:</span>
+                  <span class="earned-meta-v text-warning font-semibold">Perlu Resertifikasi</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="earned-cert-footer">
+              <button type="button" class="btn btn-outline btn-sm btn-open-cert-details" data-cert-id="CERT-2024-4402">
+                <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">visibility</span>
+                Lihat Riwayat
+              </button>
+              <button type="button" class="btn btn-primary btn-sm btn-resertifikasi" data-scheme="DPO-08">
+                <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">replay</span>
+                Ajukan Perpanjangan
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         TAB 5: PROFILE (SETTING PROFILE ASESI)
+         =================================================================== -->
+    <section id="view-profil" class="tab-pane" role="tabpanel" aria-labelledby="nav-btn-profil">
+      <div class="container section-spacer">
+
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="material-symbols-outlined tag-icon" aria-hidden="true">manage_accounts</span>
+            Kredensial & Pengaturan Akun
+          </div>
+          <h1 class="section-heading">Pengaturan Profil Asesi BNSP</h1>
+          <p class="section-subheading">
+            Kelola data identitas kependudukan, riwayat pendidikan formal, portofolio bukti kerja, dan keamanan akses
+            akun sertifikasi Anda.
+          </p>
+        </div>
+
+        <div class="profile-layout-grid">
+
+          <!-- Profile Left Sidebar: Avatar & Verification Status -->
+          <div class="profile-card profile-sidebar">
+            <div class="profile-avatar-wrap">
+              <div class="profile-large-avatar" aria-label="Avatar Inisial Asesi">RB</div>
+              <button type="button" class="avatar-edit-btn" id="btn-change-photo" title="Ubah foto identitas">
+                <span class="material-symbols-outlined" aria-hidden="true">photo_camera</span>
+              </button>
+            </div>
+
+            <h2 class="profile-person-name" id="display-profile-name">Raden Bagus Prakoso, S.Kom</h2>
+            <span class="profile-person-role font-mono">No. Asesi: BNSP-ID-2026-0912</span>
+
+            <div class="profile-status-checklist">
+              <div class="check-item verified">
+                <span class="material-symbols-outlined" aria-hidden="true">verified_user</span>
+                <span>NIK Valid Terhubung Dukcapil</span>
+              </div>
+              <div class="check-item verified">
+                <span class="material-symbols-outlined" aria-hidden="true">mark_email_read</span>
+                <span>Email Terverifikasi</span>
+              </div>
+              <div class="check-item verified">
+                <span class="material-symbols-outlined" aria-hidden="true">phonelink_ring</span>
+                <span>Nomor HP OTP Aktif</span>
+              </div>
+            </div>
+
+            <div class="profile-quick-stats">
+              <div class="p-stat">
+                <strong class="font-mono">2</strong>
+                <span>Sertifikat</span>
+              </div>
+              <div class="p-stat">
+                <strong class="font-mono">15</strong>
+                <span>Unit Lulus</span>
+              </div>
+              <div class="p-stat">
+                <strong class="font-mono">1</strong>
+                <span>Jadwal Uji</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Profile Right Area: Settings Tabs & Forms -->
+          <div class="profile-card profile-content">
+
+            <div class="profile-nav-tabs" role="tablist">
+              <button type="button" role="tab" class="prof-tab-btn active" aria-selected="true"
+                data-prof-tab="data-diri">
+                Data Diri
+              </button>
+              <button type="button" role="tab" class="prof-tab-btn" aria-selected="false" data-prof-tab="pendidikan">
+                Pendidikan & Portofolio
+              </button>
+              <button type="button" role="tab" class="prof-tab-btn" aria-selected="false" data-prof-tab="keamanan">
+                Keamanan & Akun
+              </button>
+            </div>
+
+            <!-- Tab Pane 1: Data Diri -->
+            <form id="profile-personal-form" class="profile-form-pane active" novalidate>
+              <h3 class="form-section-title">Data Identitas Asesi Sesuai KTP / Paspor</h3>
+
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="prof-nama" class="form-label">Nama Lengkap & Gelar (Sesuai Ijazah)</label>
+                  <input type="text" id="prof-nama" class="form-input" value="Raden Bagus Prakoso, S.Kom" required>
+                </div>
+                <div class="form-group">
+                  <label for="prof-nik" class="form-label">Nomor Induk Kependudukan (NIK)</label>
+                  <input type="text" id="prof-nik" class="form-input font-mono" value="3273201402980004" required>
+                </div>
+              </div>
+
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="prof-email" class="form-label">Alamat Surat Elektronik (Email)</label>
+                  <input type="email" id="prof-email" class="form-input font-mono" value="bagus.prakoso@alumni.ac.id"
+                    required>
+                </div>
+                <div class="form-group">
+                  <label for="prof-phone" class="form-label">Nomor Kontak WhatsApp / Telepon</label>
+                  <input type="tel" id="prof-phone" class="form-input font-mono" value="+62 812-9844-3200" required>
+                </div>
+              </div>
+
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="prof-ttl" class="form-label">Tempat & Tanggal Lahir</label>
+                  <input type="text" id="prof-ttl" class="form-input" value="Bandung, 14 Februari 1998">
+                </div>
+                <div class="form-group">
+                  <label for="prof-gender" class="form-label">Jenis Kelamin</label>
+                  <select id="prof-gender" class="form-input">
+                    <option value="L" selected>Laki-laki</option>
+                    <option value="P">Perempuan</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="prof-alamat" class="form-label">Alamat Domisili Kependudukan</label>
+                <textarea id="prof-alamat" class="form-input"
+                  rows="2">Jl. Dago Asri Raya No. 18, Coblong, Kota Bandung, Jawa Barat 40135</textarea>
+              </div>
+
+              <div class="form-action-row">
+                <button type="submit" class="btn btn-primary">
+                  <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">save</span>
+                  Simpan Perubahan Identitas
+                </button>
+              </div>
+            </form>
+
+            <!-- Tab Pane 2: Pendidikan & Portofolio -->
+            <form id="profile-edu-form" class="profile-form-pane" novalidate>
+              <h3 class="form-section-title">Riwayat Pendidikan Formal & Instansi Asal</h3>
+
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="prof-pendidikan" class="form-label">Pendidikan Terakhir</label>
+                  <select id="prof-pendidikan" class="form-input">
+                    <option value="S1" selected>Strata 1 (S1 / D4)</option>
+                    <option value="S2">Strata 2 (S2)</option>
+                    <option value="D3">Diploma 3 (D3)</option>
+                    <option value="SMK">SMK / SMA Sederajat</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="prof-kampus" class="form-label">Nama Perguruan Tinggi / Sekolah</label>
+                  <input type="text" id="prof-kampus" class="form-input" value="Institut Teknologi Bandung (ITB)">
+                </div>
+              </div>
+
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="prof-prodi" class="form-label">Program Studi / Jurusan</label>
+                  <input type="text" id="prof-prodi" class="form-input" value="Teknik Informatika">
+                </div>
+                <div class="form-group">
+                  <label for="prof-pekerjaan" class="form-label">Instansi / Perusahaan Tempat Kerja Saat Ini</label>
+                  <input type="text" id="prof-pekerjaan" class="form-input" value="PT Solusi Awan Nusantara">
+                </div>
+              </div>
+
+              <h3 class="form-section-title mt-4">Dokumen Bukti Portofolio (Persyaratan APL-01)</h3>
+              <div class="portfolio-files-box">
+                <div class="p-file-item">
+                  <span class="material-symbols-outlined file-ico" aria-hidden="true">picture_as_pdf</span>
+                  <div class="file-info">
+                    <strong>Ijazah-S1-Informatika-Legalisir.pdf</strong>
+                    <span class="font-mono text-xs text-muted">2.4 MB - Terverifikasi oleh Tim Asesmen</span>
+                  </div>
+                  <span class="status-badge badge-success">Valid</span>
+                </div>
+                <div class="p-file-item">
+                  <span class="material-symbols-outlined file-ico" aria-hidden="true">picture_as_pdf</span>
+                  <div class="file-info">
+                    <strong>Surat-Keterangan-Pengalaman-Kerja-3Tahun.pdf</strong>
+                    <span class="font-mono text-xs text-muted">1.1 MB - Ditandatangani Pimpinan Perusahaan</span>
+                  </div>
+                  <span class="status-badge badge-success">Valid</span>
+                </div>
+              </div>
+
+              <div class="form-action-row">
+                <button type="submit" class="btn btn-primary">
+                  <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">upload_file</span>
+                  Perbarui Portofolio & Pendidikan
+                </button>
+              </div>
+            </form>
+
+            <!-- Tab Pane 3: Keamanan & Akun -->
+            <form id="profile-security-form" class="profile-form-pane" novalidate>
+              <h3 class="form-section-title">Pengaturan Sandi & Keamanan Masuk</h3>
+
+              <div class="form-group">
+                <label for="pass-current" class="form-label">Kata Sandi Saat Ini</label>
+                <input type="password" id="pass-current" class="form-input font-mono"
+                  placeholder="Masukkan sandi saat ini">
+              </div>
+
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="pass-new" class="form-label">Kata Sandi Baru</label>
+                  <input type="password" id="pass-new" class="form-input font-mono"
+                    placeholder="Minimal 8 karakter kombinasi">
+                </div>
+                <div class="form-group">
+                  <label for="pass-confirm" class="form-label">Konfirmasi Kata Sandi Baru</label>
+                  <input type="password" id="pass-confirm" class="form-input font-mono"
+                    placeholder="Ulangi kata sandi baru">
+                </div>
+              </div>
+
+              <h3 class="form-section-title mt-4">Autentikasi Dua Langkah (2FA)</h3>
+              <div class="security-toggle-card">
+                <div class="sec-left">
+                  <span class="material-symbols-outlined text-primary" aria-hidden="true">security</span>
+                  <div>
+                    <strong>Verifikasi Kode OTP WhatsApp / Email</strong>
+                    <p class="text-sm text-muted">Meminta kode acak 6 angka setiap kali mengakses unduhan sertifikat
+                      asli.</p>
+                  </div>
+                </div>
+                <label class="switch-toggle" for="switch-2fa">
+                  <input type="checkbox" id="switch-2fa" checked>
+                  <span class="toggle-slider"></span>
+                  <span class="sr-only">Aktifkan Autentikasi Dua Langkah</span>
+                </label>
+              </div>
+
+              <div class="form-action-row">
+                <button type="submit" class="btn btn-primary">
+                  <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">lock_reset</span>
+                  Simpan Pengaturan Keamanan
+                </button>
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Interactive Modal: Certificate Detailed Inspector -->
+  <div id="cert-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-cert-title"
+    aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="material-symbols-outlined modal-header-icon" aria-hidden="true">verified</span>
+          <h2 id="modal-cert-title" class="modal-title">Lembar Rincian Sertifikat Resmi BNSP</h2>
+        </div>
+        <button type="button" id="modal-close-btn" class="modal-close-btn btn-icon"
+          aria-label="Tutup jendela rincian sertifikat">
+          <span class="material-symbols-outlined" aria-hidden="true">close</span>
+        </button>
+      </div>
+
+      <div class="modal-body" id="modal-cert-content">
+        <!-- Injected dynamically -->
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" id="modal-copy-link-btn" class="btn btn-outline">
+          <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">link</span>
+          Salin Tautan Verifikasi
+        </button>
+        <button type="button" id="modal-download-sim-btn" class="btn btn-primary">
+          <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">download</span>
+          Unduh Dokumen PDF
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Modal: Registration for BNSP Assessment -->
+  <div id="register-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-reg-title"
+    aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="material-symbols-outlined modal-header-icon" aria-hidden="true">how_to_reg</span>
+          <h2 id="modal-reg-title" class="modal-title">Formulir Pendaftaran Uji Asesmen</h2>
+        </div>
+        <button type="button" id="reg-modal-close-btn" class="modal-close-btn btn-icon"
+          aria-label="Tutup formulir pendaftaran">
+          <span class="material-symbols-outlined" aria-hidden="true">close</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <form id="scheme-register-form">
+          <div class="form-group">
+            <label class="form-label">Skema Sertifikasi Pilihan</label>
+            <input type="text" id="reg-scheme-display" class="form-input font-bold" readonly>
+          </div>
+          <div class="form-group">
+            <label for="reg-tuk-select" class="form-label">Pilih Tempat Uji Kompetensi (TUK)</label>
+            <select id="reg-tuk-select" class="form-input" required>
+              <option value="TUK Cyber Jakarta">TUK Mandiri Kampus Cyber Jakarta</option>
+              <option value="TUK Telkom ITB Bandung">TUK Mandiri Telkom ITB Bandung</option>
+              <option value="TUK Sewaktu Kemkomdigi">TUK Sewaktu Kemkomdigi Jakarta Pusat</option>
+              <option value="TUK Virtual Daring">TUK Virtual Daring (Asesmen Jarak Jauh)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="reg-date-select" class="form-label">Pilih Periode Tanggal Asesmen</label>
+            <select id="reg-date-select" class="form-input" required>
+              <option value="28 Maret 2026">28 Maret 2026 (Sesi Pagi 08.30 WIB)</option>
+              <option value="05 April 2026">05 April 2026 (Sesi Pagi 09.00 WIB)</option>
+              <option value="18 April 2026">18 April 2026 (Sesi Siang 13.00 WIB)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Konfirmasi Data Pemohon</label>
+            <div class="confirm-box font-mono text-sm">
+              <div>Asesi : Raden Bagus Prakoso, S.Kom</div>
+              <div>NIK : 327320******0004</div>
+              <div>Status: Portofolio APL-01 Terunggah</div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            <span class="material-symbols-outlined btn-icon-start" aria-hidden="true">check</span>
+            Kirim Permohonan Asesmen BNSP
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Toast for feedback actions -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- Standard Institutional Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-brand-col">
+        <div class="brand-logo footer-logo">
+          <div class="brand-badge-icon">
+            <span class="material-symbols-outlined" aria-hidden="true">workspace_premium</span>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">Sertifika<span class="brand-accent">Net</span></span>
+            <span class="brand-name">Certi<span class="brand-accent">Skill</span></span>
+            <span class="brand-sub">PORTAL UJI KOMPETENSI RESMI</span>
+          </div>
+        </div>
+        <p class="footer-desc">
+          Portal layanan uji sertifikasi kompetensi digital terakreditasi Badan Nasional Sertifikasi Profesi (BNSP).
+          Memastikan tenaga kerja terampil Indonesia diakui secara legal dan berdaya saing global.
+        </p>
+        <div class="footer-legal-badge">
+          <span class="material-symbols-outlined" aria-hidden="true">gavel</span>
+          <span>Sertifikasi Sah Berdasarkan SKKNI & UU Ketenagakerjaan</span>
+        </div>
+      </div>
+
+      <div class="footer-links-col">
+        <h4 class="footer-heading">Navigasi Tab Portal</h4>
+        <ul class="footer-links">
+          <li><button type="button" class="footer-tab-link" data-tab="beranda">Beranda Utama</button></li>
+          <li><button type="button" class="footer-tab-link" data-tab="katalog">Katalog Skema SKKNI</button></li>
+          <li><button type="button" class="footer-tab-link" data-tab="jadwal">Jadwal TUK & Materi APL</button></li>
+          <li><button type="button" class="footer-tab-link" data-tab="ujian">Ujian Online CBT Proktor</button></li>
+          <li><button type="button" class="footer-tab-link" data-tab="sertifikasi">Daftar Sertifikat Saya</button></li>
+          <li><button type="button" class="footer-tab-link" data-tab="profil">Pengaturan Profil Asesi</button></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4 class="footer-heading">Regulasi & Akreditasi</h4>
+        <ul class="footer-links">
+          <li><a href="#view-beranda" class="footer-info-link" data-doc="UU-13-2003">UU No. 13 Tahun 2003
+              Ketenagakerjaan</a></li>
+          <li><a href="#view-beranda" class="footer-info-link" data-doc="PP-31-2006">PP No. 31 Tahun 2006 Sistem
+              Pelatihan Kerja</a></li>
+          <li><a href="#view-beranda" class="footer-info-link" data-doc="Pedoman-BNSP-201">Pedoman BNSP 201 Persyaratan
+              LSP</a></li>
+          <li><a href="#view-beranda" class="footer-info-link" data-doc="Pedoman-BNSP-202">Pedoman BNSP 202 Persyaratan
+              TUK</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4 class="footer-heading">Sekretariat LSP & TUK</h4>
+        <p class="footer-contact-item">
+          <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+          Gedung Pusat Kompetensi Nasional Lt. 3, Jakarta Selatan
+        </p>
+        <p class="footer-contact-item">
+          <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+          layanan.asesi@sertifikanet.id
+          layanan.asesi@certiskill.id
+        </p>
+        <p class="footer-contact-item">
+          <span class="material-symbols-outlined" aria-hidden="true">call</span>
+          +62 (21) 5296-4400
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p class="copyright-text">
+          &copy; 2026 SertifikaNet. Terlisensi Resmi Badan Nasional Sertifikasi Profesi (BNSP).
+          &copy; 2026 CertiSkill. Terlisensi Resmi Badan Nasional Sertifikasi Profesi (BNSP).
+        </p>
+        <div class="footer-bottom-badges">
+          <span class="footer-pill font-mono">Standar ISO/IEC 17024</span>
+          <span class="footer-pill font-mono">CBT AI Proctor Active</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
